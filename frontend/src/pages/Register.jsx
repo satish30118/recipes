@@ -2,7 +2,8 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const RegisterPage = () => {
-  const { loginWithRedirect } = useAuth0();
+  const {user, loginWithRedirect, isAuthenticated, logout } = useAuth0();
+  console.log(user)
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
